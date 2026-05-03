@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TDL APP</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+       <body>
+
+  <div class="auth-overlay" id="auth-overlay">
+    <div class="auth-box">
+      <h2>Welcome 🌸</h2>
+
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tab-login" onclick="switchTab('login')">Login</button>
+        <button class="auth-tab" id="tab-register" onclick="switchTab('register')">Register</button>
+      </div>
+
+      <input type="text" id="auth-username" placeholder="Username" autocomplete="off" />
+      <input type="password" id="auth-password" placeholder="Password" />
+      <p class="auth-error" id="auth-error"></p>
+      <button class="auth-submit-btn" id="auth-submit-btn" onclick="handleAuth()">Login</button>
+    </div>
+  </div>
+
+  <!-- MAIN APP -->
+  <div class="container" id="main-app" style="display:none;">
+    <div class="todo-app">
+      <div class="app-header">
+        <h1>TO-DO App</h1>
+        <button class="logout-btn" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </button>
+      </div>
+      <p class="welcome-name" id="welcome-name"></p>
+
+      <form class="input-area">
+        <input type="text" id="task-input" placeholder="Add a new task...">
+        <button type="submit" id="add-task-button">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </form>
+
+      <div class="todos-container">
+        <ul id="task-list"></ul>
+        <p id="empty-msg">No tasks yet. Add one above!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+    </body>
+</html>
