@@ -50,10 +50,13 @@ body {
     align-items: center;
     width: 100%;
     padding-right: 2px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .input-area input {
     flex: 1;
+    min-width: 0;
     padding: 10px 17px;
     font-size: 1.1rem;
     border: none;
